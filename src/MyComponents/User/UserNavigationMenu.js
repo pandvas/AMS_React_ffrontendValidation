@@ -12,18 +12,10 @@ const UserNavigationMenu = () => {
 
     const [showAdmin, setShowAdmin] = useState(false);
     const [showStudent, setShowStudent] = useState(false);
-
     const [showRegisterAdmin, setShowRegisterAdmin] = useState(false);
-
     const [name, setName] = useState();
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
-    // handleUserHome()
-    // {
-    //     history.push('/UserHome')
-
-    // }
-
     const AddAdmin = async () => {
         var password = document.getElementById('password').value;
         var confirmPassword = document.getElementById('confirm_password').value;
@@ -91,34 +83,34 @@ history.push('/')
                     <Navbar.Toggle aria-controls="responsive-navbar-nav"></Navbar.Toggle>
                     <Navbar.Collapse id="responsive-navbar-nav">
 
-                        <Nav className="me-auto">
+                         <Nav className="me-auto">
                             <Nav.Link href="#" onClick={Home} id="voli">Home</Nav.Link>
                             <Nav.Link href="#about" onClick="" id="voli">About Us</Nav.Link>
                             <Nav.Link href="#gallery" onClick="" id="voli">Gallery</Nav.Link>
                             <Nav.Link href="#contact" onClick="" id="voli">Contact Us</Nav.Link>
                             <Nav.Link href="#ourteam" onClick="" id="voli">Our Team</Nav.Link>
                             <Nav.Link href="/pollq" onClick="/pollq" id="voli">Poll</Nav.Link>
-                            {/* <NavLink ><Link  to="/pollq" className="btn sandy"  id="voli">Poll</Link></NavLink> */}
+                             {/* <NavLink ><Link  to="/pollq" className="btn sandy"  id="voli">Poll</Link></NavLink>  */}
                         </Nav>
                         {/* <Nav>
                             <NavDropdown
                                 id="nav-dropdown-dark-example"
                                 title="Login"
                                 menuVariant="dark"
-                            > */}
-                                {/* <NavDropdown.Item href="#" onClick={() => setShowStudent(true)}>Student</NavDropdown.Item> */}
-                                {/* <NavDropdown.Divider /> */}
-                                {/* <NavDropdown.Item href="/login" id="uni">Admin</NavDropdown.Item> */}
-                            {/* </NavDropdown> */}
-                            {/* <NavDropdown
+                            > 
+                                 {/* <NavDropdown.Item href="#" onClick={() => setShowStudent(true)}>Student</NavDropdown.Item>  */}
+                                {/* <NavDropdown.Divider />  */}
+                                {/* <NavDropdown.Item href="/login" id="uni">Admin</NavDropdown.Item> 
+                             </NavDropdown> 
+                            <NavDropdown
                                 id="nav-dropdown-dark-example"
                                 title="Register"
                                 menuVariant="dark"
-                            > */}
-                                {/* <NavDropdown.Item href="#" onClick={() => setShowRegisterAdmin(true)}>Admin</NavDropdown.Item> */}
-                                {/* <NavDropdown.Divider /> */}
+                            > 
+                                 <NavDropdown.Item href="#" onClick={() => setShowRegisterAdmin(true)}>Admin</NavDropdown.Item> 
+                                {/* <NavDropdown.Divider />  */}
                             {/* </NavDropdown> */}
-                        {/* </Nav> */}
+                        {/* </Nav>  */}
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

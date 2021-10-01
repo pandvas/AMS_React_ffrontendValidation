@@ -36,6 +36,7 @@ import UpdateEvent from './MyComponents/UpdateEvent';
 import Login from './MyComponents/Admin/Login';
 import UserFooter from './MyComponents/Admin/AdminFooter';
 import Formregister from './MyComponents/User/Formregister';
+import AdminRegister from './MyComponents/Admin/AdminRegister';
 const App = () => {
     return (
         <div>
@@ -179,10 +180,12 @@ const App = () => {
 
 
 
+                    <Route path="/adminRegister">
+                   <AdminRegister />
+                      
 
-
-
-
+                      
+                    </Route>
                     <Route path="/pollq">
                     <UserNavigationMenu />
                         {/* <NavigationMenu /> */}
