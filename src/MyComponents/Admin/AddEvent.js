@@ -19,6 +19,20 @@ const AddEvent = () => {
     const[venueErr,setVn] = useState({}); 
 
 
+    useState(()=>{
+      if (localStorage.getItem('login')){
+
+        history.push("/addEvent")
+    }
+    else{
+      alert("Please log in to Add Add Event");
+      history.push("/login")
+    }
+  },[])
+
+  
+
+
     const AddEvent = async (e) => {
       e.preventDefault();
 

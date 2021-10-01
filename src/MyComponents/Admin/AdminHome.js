@@ -38,11 +38,29 @@
 // export default AdminHome
 
 
-
+import { useEffect } from "react";
 import React from "react";
+import { useHistory } from "react-router";
 // import { Container } from 'react-bootstrap'
 
 const AdminHome = () => {
+
+  const history = useHistory();
+
+
+
+
+  useEffect(() => {
+    if (localStorage.getItem('login')){
+
+        history.push("/adminHome")
+    }
+    else{
+      alert("Please log in ")
+      history.push("/login")
+    }
+},[])
+
     return(
 <>
 
