@@ -113,12 +113,9 @@ import {Link} from 'react-router-dom';
             password:""
         }
         this.login = this.login.bind(this);
-        
-
     }
      login()
      {
-       
          let object ={email : this.state.email , password : this.state.password};
          console.warn("state",this.state)
          fetch('http://127.0.0.1:8000/api/admin/login/',{
