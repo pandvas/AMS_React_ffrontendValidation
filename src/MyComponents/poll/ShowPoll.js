@@ -1,37 +1,34 @@
 import { useEffect ,useState } from 'react';
 import axios from 'axios';
+import { useHistory } from 'react-router';
 
 
 const ShowPoll = () => {
     var c1 = 0;
     var c2 = 0;
-    var c3 = 0;
+  
     const [vote, setVote] = useState([]);
+    const history = useHistory();
 
 
-     const getUsers =async()=>
+     const getUsers = async()=>
      {
+       if (localStorage.getItem('login')){
+        const token = localStorage.getItem('login');
     
-        const response = await axios.get("http://127.0.0.1:8000/api/ppp2");
+        const response = await axios.get("http://127.0.0.1:8000/api/ppp2",{ headers: {"Authorization" : `Bearer ${token}`} })
         // setData({data});
         const value = response.data;
         console.log(value);
         console.log(response.data);
         setVote(value);
-        console.log(value);
-        
-            
-
-
-        
-        
-        
-        
-       
-        // console.log(vote);
+        console.log(value)
+       }else{
+         alert("ple");
+         history.push('/login');
+       }
       }
-      console.log("sdhfcsdvhf")
-      console.log(vote);
+      // console.log(vote);
     
       useEffect(() => {
         getUsers();

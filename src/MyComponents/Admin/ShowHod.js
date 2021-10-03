@@ -3,11 +3,22 @@ import Card from "react-bootstrap/Card";
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import {Table} from 'react-bootstrap';
+import { useHistory } from "react-router";
 
 const ShowHod = () => {
   const [hod, sethod] = useState([]);
+  const history = useHistory();
 
   useEffect(async() => {
+    if (localStorage.getItem('login')){
+      history.push('/showHod')
+
+    }
+    else{
+      alert("Please log in to Show HOD");
+      history.push("/login")
+
+    }
    const show=await axios("http://127.0.0.1:8000/api/getHod/");
             
               sethod(show.data)

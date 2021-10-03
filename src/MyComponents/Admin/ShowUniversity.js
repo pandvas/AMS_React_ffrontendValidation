@@ -45,7 +45,7 @@ export default class ShowUniversity extends Component {
       }
 
     componentDidMount() {
-      const token = localStorage.getItem('loginff');
+      const token = localStorage.getItem('login');
       console.log(token);
         axios
           .get("http://127.0.0.1:8000/api/getUniversity/",{ headers: {"Authorization" : `Bearer ${token}`} })

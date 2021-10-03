@@ -16,6 +16,23 @@ const AddCourse = () => {
 
     const history = useHistory();
 
+
+
+
+    
+    useState(()=>{
+      if (localStorage.getItem('login')){
+
+        history.push("/addCourse")
+    }
+    else{
+      alert("Please log in to Add Course");
+      history.push("/login")
+    }
+  },[])
+
+
+
     const AddCourse = async (e) => {
       e.preventDefault();
 
