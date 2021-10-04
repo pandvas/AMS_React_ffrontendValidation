@@ -47,31 +47,26 @@ const AddHod = () => {
         formField.append('email', email);
         formField.append('address', address);
         formField.append('id_hod', id_hod);
-
         await axios({
             method: 'POST',
             url: 'http://127.0.0.1:8000/api/admin/addHod/',
             data: formField
-
         }).then((response) => {
             console.log(response.data)
             alert("hOD Added Successfully!");
             history.push('/showHod')
             window.location.reload(false);
-            
         }).catch((error) => {
             console.log(error);
             alert("Please Enter Valid Data");
     });
     }
   }
-
     const formValidation = () =>{
       const nameErr = {};
       const addressErr = {};
       // const phoneErr = {};
       // const emailErr = {};
-
       let isValid = true;
       if(name.trim().length < 5){
         nameErr.nameShort = "* Name too short";
@@ -81,7 +76,6 @@ const AddHod = () => {
         nameErr.nameShort = "* Name too long";
         isValid = false;
       }
-
       if(address.trim().length < 5){
         addressErr.addressShort = "* Address too short";
         isValid = false;
@@ -90,13 +84,10 @@ const AddHod = () => {
         addressErr.addressShort = "* Address too long";
         isValid = false;
       }
-
       // if(phone.trim().length < 10){
       //   phoneErr.addressShort = "* Invalid No";
       //   isValid = false;
       // }
-
-
       setNam(nameErr);
       setAdd(addressErr);
       // setPh(phoneErr);
