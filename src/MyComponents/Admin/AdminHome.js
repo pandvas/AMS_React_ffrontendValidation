@@ -70,13 +70,13 @@ const AdminHome = () => {
       
         <div class="row align-items-center h-100">
         
-          <div class="col-md-6">
+          <div class="col-md-6  animate__animated animate__wobble">
             <h1 class="mb-4">Welcome to <span class="text-warning">AMS</span><br/><span class="cyan-text" style={{color : "#74D5DE"}}>Admin</span> Dashboard</h1>
             <p class="mb-4 pb-2 dark-grey-text">Dear Alumnus, Back in the year 20's you used to sit in the class and dream of a future where success and prosperity would be yours. We hope you have achieved your dreams. But now is the time to sit back and think of the times gone by. Revisit the days gone by at the Alumni Meet.</p>
           	
           </div>
           <div class="col-md-6">
-            <img src="https://mdbootstrap.com/img/illustrations/hiker-man-colour.svg" alt="" class="img-fluid" style={{marginTop:"3%"}} />
+            <img src="https://mdbootstrap.com/img/illustrations/hiker-man-colour.svg" alt="" class="img-fluid  animate__animated animate__wobble" style={{marginTop:"3%"}} />
           </div>
         
         </div>
