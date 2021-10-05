@@ -80,25 +80,25 @@ function NavigationMenu() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <NavLink   ><Link  to="/adminHome" className="btn sandy"  id="voli">Home</Link></NavLink>
-            <NavDropdown title="Add"  id="collasible-nav-dropdown "  id="voli" className="btn" style={{color :"#fff"}}>
-              <NavDropdown.Item><Link to="/addUniversity" className=" btn">University</Link></NavDropdown.Item><NavDropdown.Divider />
-              <NavDropdown.Item><Link to="/addDepartment" className=" btn">Department</Link></NavDropdown.Item><NavDropdown.Divider />
-              <NavDropdown.Item><Link to="/addHod" className=" btn">Hod</Link></NavDropdown.Item><NavDropdown.Divider />
-              <NavDropdown.Item><Link to="/addFaculty" className=" btn">Faculty</Link></NavDropdown.Item><NavDropdown.Divider />
-              <NavDropdown.Item><Link to="/addStudent" className=" btn">Student</Link></NavDropdown.Item><NavDropdown.Divider />
-              <NavDropdown.Item><Link to="/addCourse" className=" btn">Course</Link></NavDropdown.Item><NavDropdown.Divider />
+            <NavDropdown title="Add"  id="collasible-nav-dropdown "  id="voli" className="btn " style={{color :"#fff" }}>
+              <NavDropdown.Item ><Link to="/addUniversity" className=" btn ">University</Link></NavDropdown.Item>
+              <NavDropdown.Item ><Link to="/addDepartment" className=" btn ">Department</Link></NavDropdown.Item>
+              <NavDropdown.Item ><Link to="/addHod" className=" btn">Hod</Link></NavDropdown.Item>
+              <NavDropdown.Item ><Link to="/addFaculty" className=" btn">Faculty</Link></NavDropdown.Item>
+              <NavDropdown.Item><Link to="/addStudent" className=" btn">Student</Link></NavDropdown.Item>
+              <NavDropdown.Item><Link to="/addCourse" className=" btn">Course</Link></NavDropdown.Item>
               <NavDropdown.Item><Link to="/addEvent" className=" btn">Event</Link></NavDropdown.Item>
             </NavDropdown>
-            <NavDropdown title="Map" className="btn" id="collasible-nav-dropdown" id="voli">
+            <NavDropdown title="Map" className="btn pr" id="collasible-nav-dropdown" id="voli">
               <NavDropdown.Item><Link to="/mapDepartment" className="btn">Department</Link></NavDropdown.Item><NavDropdown.Divider />
               <NavDropdown.Item><Link to="/mapFaculty" className="btn">Faculty</Link></NavDropdown.Item><NavDropdown.Divider />
               <NavDropdown.Item><Link to="/mapStudent" className="btn">Student</Link></NavDropdown.Item><NavDropdown.Divider />
               <NavDropdown.Item><Link to="/mapRoll" className="btn">Roll No</Link></NavDropdown.Item><NavDropdown.Divider />
               <NavDropdown.Item><Link to="/mapEvent" className="btn">Event</Link></NavDropdown.Item>
             </NavDropdown>
-            <NavDropdown  title="Show" id="collasible-nav-dropdown" className="btn" style={{color :" #fff"  }} id="voli" >
-              <NavDropdown.Item><Link to="/showUniversity" className=" btn">University</Link></NavDropdown.Item><NavDropdown.Divider />
-              <NavDropdown.Item><Link to="/showDepartment" className=" btn">Department</Link></NavDropdown.Item><NavDropdown.Divider />
+            <NavDropdown  title="Show" id="collasible-nav-dropdown" className="btn pr" style={{color :" #fff"  }} id="voli" >
+              <NavDropdown.Item><Link to="/showUniversity" className=" btn pr">University</Link></NavDropdown.Item><NavDropdown.Divider />
+              <NavDropdown.Item><Link to="/showDepartment" className=" btn pr">Department</Link></NavDropdown.Item><NavDropdown.Divider />
               <NavDropdown.Item><Link to="/showHod" className=" btn">Hod</Link></NavDropdown.Item><NavDropdown.Divider />
               <NavDropdown.Item><Link to="/showFaculty" className=" btn">Faculty</Link></NavDropdown.Item><NavDropdown.Divider />
               <NavDropdown.Item><Link to="/showStudent" className=" btn">Student</Link></NavDropdown.Item><NavDropdown.Divider />
@@ -108,7 +108,7 @@ function NavigationMenu() {
 
             </NavDropdown>
 
-            <NavLink   ><Link  to="/pollq" className="btn sandy"  id="voli">Poll</Link></NavLink>
+            {/* <NavLink   ><Link  to="/pollq" className="btn sandy"  id="voli">Poll</Link></NavLink> */}
 
             {/* <NavDropdown.Item><Link to="/showPoll" className=" btn">Poll</Link></NavDropdown.Item> */}
 
