@@ -20,6 +20,17 @@ const AddStudent = () => {
 
     const history = useHistory();
 
+    useState(()=>{
+      if (localStorage.getItem('login')){
+
+        history.push("/addStudent")
+    }
+    else{
+      alert("Please log in to Add Add Student");
+      history.push("/login")
+    }
+  },[])
+
 
     const AddStudent = async (e) => {
       e.preventDefault();

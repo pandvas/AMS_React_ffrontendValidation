@@ -11,6 +11,20 @@ const AddDepartment = () => {
     
     const[nameErr,setNam] = useState({});
 
+
+
+
+    useState(()=>{
+      if (localStorage.getItem('login')){
+
+        history.push("/addDepartment")
+    }
+    else{
+      alert("Please log in to Add Add Department");
+      history.push("/login")
+    }
+  },[])
+
     const AddDepartment = async (e) => {
       e.preventDefault();
       const isValid = formValidation();

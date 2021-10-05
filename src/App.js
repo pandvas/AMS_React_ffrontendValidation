@@ -32,6 +32,7 @@ import UpdateDepartment from './MyComponents/UpdateDepartment';
 import UpdateFaculty from './MyComponents/UpdateFaculty';
 import UpdateStudent from './MyComponents/UpdateStudent';
 import UpdateEvent from './MyComponents/UpdateEvent';
+// import Login from './MyComponents/Admin/Login';
 import Login from './MyComponents/Admin/Login';
 import UserFooter from './MyComponents/Admin/AdminFooter';
 import Formregister from './MyComponents/User/Formregister';

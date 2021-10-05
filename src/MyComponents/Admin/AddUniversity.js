@@ -19,6 +19,21 @@ const AddUniversity = () => {
 
     const history = useHistory();
 
+
+
+
+    useState(()=>{
+      if (localStorage.getItem('login')){
+
+        history.push("/addUniversity")
+    }
+    else{
+      alert("Please log in to Add Add University");
+      history.push("/login")
+    }
+  },[])
+
+
     const AddUniversity = async () => {
         let formField = new FormData();
         formField.append('name', name);

@@ -3,6 +3,7 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import Card from "react-bootstrap/Card";
 import React from "react";
 import { Component } from "react";
+import { withRouter } from 'react-router';
 import {
   Table,
   TableBody,
@@ -15,7 +16,7 @@ import {
 import { Link } from 'react-router-dom';
 import axios from "axios";
 
-export default class ShowFaculty extends Component {
+class ShowFaculty extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -23,6 +24,7 @@ export default class ShowFaculty extends Component {
       id: "",
     };
     this.idHandler = this.idHandler.bind(this);
+    
   }
   idHandler(e) {
     this.setState({ id:Number(e.target.value) });
@@ -45,14 +47,27 @@ export default class ShowFaculty extends Component {
 
  
   componentDidMount() {
-    axios
-      .get("http://127.0.0.1:8000/api/getfacuilty/")
+    
+    
+    if(localStorage.getItem('login')){
+      const token = localStorage.getItem('login');
+    
+      axios
+      .get("http://127.0.0.1:8000/api/getfacuilty/",{ headers: {"Authorization" : `Bearer ${token}`} })
       .then((res) => {
         //console.log(res.data.products);
          this.setState({ data: res.data })
            console.log(res.data);
       })
       .catch((err) => console.error(err));
+    
+      
+    }else{
+
+      alert("please log in to show Faculity");
+      this.props.history.push('/login');
+    }
+   
   }
   render() {
 
@@ -117,3 +132,4 @@ export default class ShowFaculty extends Component {
     );
   }
 }
+export default withRouter(ShowFaculty);

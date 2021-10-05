@@ -14,8 +14,9 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import { Link } from 'react-router-dom';
 import Card from "react-bootstrap/Card";
 import axios from "axios";
+import { withRouter } from "react-router";
 
-export default class ShowFaculty extends Component {
+class ShowStudent extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -45,14 +46,21 @@ export default class ShowFaculty extends Component {
 
  
   componentDidMount() {
-    axios
-      .get("http://127.0.0.1:8000/api/getStudent/")
+    if(localStorage.getItem('login')){
+      const token = localStorage.getItem('login');
+      axios
+      .get("http://127.0.0.1:8000/api/getStudent/",{ headers: {"Authorization" : `Bearer ${token}`} })
       .then((res) => {
         //console.log(res.data.products);
          this.setState({ data: res.data })
            console.log(res.data);
       })
       .catch((err) => console.error(err));
+    }else{
+      alert("please log in to show Student");
+      this.props.history.push('/login');
+    }
+    
   }
   render() {
 
@@ -122,3 +130,4 @@ export default class ShowFaculty extends Component {
     );
   }
 }
+export default withRouter(ShowStudent);

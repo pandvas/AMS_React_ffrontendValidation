@@ -24,6 +24,18 @@ const AddHod = () => {
 
     const history = useHistory();
 
+
+    useState(()=>{
+      if (localStorage.getItem('login')){
+
+        history.push("/addHod")
+    }
+    else{
+      alert("Please log in to Add Add HOD");
+      history.push("/login")
+    }
+  },[])
+
     const AddHod = async (e) => {
       e.preventDefault();
       const isValid = formValidation();
