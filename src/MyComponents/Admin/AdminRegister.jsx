@@ -33,7 +33,7 @@ const AdminRegister = () => {
                 url: 'http://127.0.0.1:8000/api/admin/register/',
                 data: formField
             }).then((response) => {
-                console.log(response.data)
+                console.log(response.data);
                 alert('successfully register')
                 history.push("/login")
             }).catch((error) => {

@@ -66,6 +66,13 @@ import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router'
 
 function NavigationMenu() {
+
+
+  var butn =  null;
+  if(localStorage.getItem('login')){
+    var butn = 'Log out'; 
+  }
+  
   const history = useHistory();
   function logout(){
     localStorage.clear();
@@ -108,13 +115,35 @@ function NavigationMenu() {
 
             </NavDropdown>
 
-            {/* <NavLink   ><Link  to="/pollq" className="btn sandy"  id="voli">Poll</Link></NavLink> */}
 
-            {/* <NavDropdown.Item><Link to="/showPoll" className=" btn">Poll</Link></NavDropdown.Item> */}
+
+
+
+            <NavDropdown  title="Apply Job" id="collasible-nav-dropdown" className="btn" style={{color :" #fff"  }} id="voli" >
+              <NavDropdown.Item><Link to="/jobreg" className=" btn">Register</Link></NavDropdown.Item><NavDropdown.Divider />
+              <NavDropdown.Item><Link to="/joblogin" className=" btn">Login</Link></NavDropdown.Item><NavDropdown.Divider />
+                 <NavLink   ><Link  to="/pollq" className="btn sandy"  id="voli">Poll</Link></NavLink>
+            </NavDropdown>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
           </Nav>
           <Nav>
-            <Nav.Link href="#" onClick={logout} id="voli" style={{color :" #fff"}}>Log Out</Nav.Link>
+            <Nav.Link href="#" onClick={logout} id="voli" style={{color :" #fff"}}>{butn}</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
