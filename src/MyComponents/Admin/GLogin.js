@@ -36,9 +36,13 @@ function GLogin() {
         
         setShowloginButton(false);
         setShowlogoutButton(true);
-        console.log("kdvjdfjbfd");
+        console.log("Profile object ");
+        console.log(res.profileObj)
+        console.log(res.profileObj.givenName);
         localStorage.setItem("glogin",res.accessToken)
-        console.log(res.accessToken);
+        localStorage.setItem("name",res.profileObj.givenName)
+        localStorage.setItem("image",res.profileObj.imageUrl)
+        // console.log(res.accessToken);
         history.push('/adminHome');
     };
 
@@ -54,7 +58,6 @@ function GLogin() {
         setShowloginButton(true);
         setShowlogoutButton(false);
         localStorage.clear();
-        // localStorage.clear();
         history.push('/login');
     };
 
