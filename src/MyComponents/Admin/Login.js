@@ -94,8 +94,8 @@ const Login = () => {
                       <form onSubmit={login}>
                         <input type="text" style={{ margin: "5px" }} required onChange={(e) => setEmail(e.target.value)} /><br />
                         <input type="password" style={{ margin: "5px" }} required onChange={(e) => setPassword(e.target.value)}
-                        /><br />
-                        <button class="button" onClick={diffToast} >LOGIN</button>
+                        /><br /> 
+                        <button class="button" onClick={diffToast}>LOGIN</button>
                         <GLogin />
                       </form>
 

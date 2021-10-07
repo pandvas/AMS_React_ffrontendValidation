@@ -2,10 +2,19 @@ import React, { useState } from 'react'
 import { Container, Form, Button, Row, Col } from 'react-bootstrap';
 import axios from 'axios';
 import { useHistory } from 'react-router'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import '../../index.css';
 
 
 const AddHod = () => {
+   // for sucess msg
+   const diffToast = () => {
+    toast.success("Hod Added successful ", {
+      position: "top-right"
+
+    });
+  }
 
     const [name, setName] = useState();
     const [phone, setPhone] = useState();
@@ -53,7 +62,7 @@ const AddHod = () => {
             data: formField
         }).then((response) => {
             console.log(response.data)
-            alert("hOD Added Successfully!");
+            // alert("hOD Added Successfully!");
             history.push('/showHod')
             window.location.reload(false);
         }).catch((error) => {
@@ -151,7 +160,7 @@ return(
                                  <Form.Label>Department Id</Form.Label>
                                  <Form.Control type="number" placeholder="Department Id" required name="id_hod" value={id_hod} onChange={(e) => setIddepartment(e.target.value)} />
                             </Form.Group>
-                            <button type="submit" class="button" >
+                            <button type="submit" onClick={diffToast} class="button" >
                                 Add Hod
                             </button>
                         
@@ -160,6 +169,8 @@ return(
                   
 
                 </div>
+                <ToastContainer />
+
                 <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
 
                   {/* <img src="https://mdbootstrap.com/img/Photos/new-templates/bootstrap-registration/draw1.png" class="img-fluid" alt="Sample image" /> */}

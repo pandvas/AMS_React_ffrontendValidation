@@ -3,6 +3,8 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import Card from "react-bootstrap/Card";
 import React from "react";
 import { Component } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { withRouter } from 'react-router';
 import {
   Table,
@@ -69,6 +71,12 @@ class ShowFaculty extends Component {
     }
    
   }
+   diffToast = () => {
+    toast.success("Login successful ", {
+      position: "top-right"
+
+    });
+  }
   render() {
 
     // console.log(users)
@@ -76,6 +84,8 @@ class ShowFaculty extends Component {
       <Card>
         <Card.Body style={{marginLeft:"4%",marginRight:"4%"}}>
           <Card.Title>Faculty Details</Card.Title>
+          <ToastContainer />
+
       <div>
         <Table>
           <TableHead>
