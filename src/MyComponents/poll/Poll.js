@@ -32,8 +32,10 @@ class Poll extends Component {
         
         alert("You voted successfully")
         this.props.history.push('/result');
-        
+       
         window.location.reload(false);
+        
+        
     }).catch((error) => {
         console.log(error)
         // alert("Please select Yes or No");
