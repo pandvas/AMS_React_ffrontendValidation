@@ -63,9 +63,11 @@
 import { Container, Navbar, NavDropdown, NavLink, Nav } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Link } from 'react-router-dom';
-import { useHistory } from 'react-router'
+import { useHistory } from 'react-router';
+import GLogin from './GLogin';
 
 function NavigationMenu() {
+
 
 
   var butn =  null;
@@ -119,6 +121,7 @@ function NavigationMenu() {
 
 
 
+
             <NavDropdown  title="Apply Job" id="collasible-nav-dropdown" className="btn" style={{color :" #fff"  }} id="voli" >
               <NavDropdown.Item><Link to="/jobreg" className=" btn">Register</Link></NavDropdown.Item><NavDropdown.Divider />
               <NavDropdown.Item><Link to="/joblogin" className=" btn">Login</Link></NavDropdown.Item><NavDropdown.Divider />
@@ -143,7 +146,10 @@ function NavigationMenu() {
 
           </Nav>
           <Nav>
-            <Nav.Link href="#" onClick={logout} id="voli" style={{color :" #fff"}}>{butn}</Nav.Link>
+          <GLogin />
+            {/* <Nav.Link href="#" onClick={logout} id="voli" style={{color :" #fff"}}>Log Out</Nav.Link> */}
+           
+
           </Nav>
         </Navbar.Collapse>
       </Container>
