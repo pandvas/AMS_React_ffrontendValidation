@@ -69,7 +69,6 @@ import GLogin from './GLogin';
 function NavigationMenu() {
 
 
-
   var butn =  null;
   if(localStorage.getItem('login')){
     var butn = 'Log out'; 
@@ -81,6 +80,7 @@ function NavigationMenu() {
     history.push("/login")
   }
 
+  // comment
 var check;
 if(localStorage.getItem('glogin')){
   check=localStorage.getItem("image");
