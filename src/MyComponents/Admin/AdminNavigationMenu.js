@@ -59,13 +59,13 @@
 // export default NavigationMenu;
 
 
-
+import { UserProfile } from 'reactify-ui';
 import { Container, Navbar, NavDropdown, NavLink, Nav } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router';
 import GLogin from './GLogin';
-
+// import author from '../../images/author'
 function NavigationMenu() {
 
 
@@ -81,6 +81,13 @@ function NavigationMenu() {
     history.push("/login")
   }
 
+var check;
+if(localStorage.getItem('glogin')){
+  check=localStorage.getItem("image");
+}
+else{
+  check="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+}
   return (
     <Navbar collapseOnSelect expand="lg" className="bgi" variant="dark" >
       <Container>
@@ -134,18 +141,15 @@ function NavigationMenu() {
 
 
 
-
-
-
-
-
-
-
-
-
-
           </Nav>
           <Nav>
+          <UserProfile
+          imgPath={check}
+        //  imgPath="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+         userName={localStorage.getItem("name")}
+         avatarRight
+        
+       />
           <GLogin />
             {/* <Nav.Link href="#" onClick={logout} id="voli" style={{color :" #fff"}}>Log Out</Nav.Link> */}
            
