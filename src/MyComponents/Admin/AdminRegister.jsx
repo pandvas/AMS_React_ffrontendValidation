@@ -68,7 +68,7 @@ const AdminRegister = () => {
                     <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
                       <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4" id="voli">Register Admin</p>
                       {/* onClick={AddAdmin} */}
-                      <Form onSubmit={AddAdmin}>
+                      <Form onSubmit={AddAdmin} >
                         <Form.Group className="mb-3">
                             <Form.Label>Enter Name</Form.Label>
                             <Form.Control type="text" placeholder="Enter Name" required name="name" value={name} onChange={(e) => setName(e.target.value)} />

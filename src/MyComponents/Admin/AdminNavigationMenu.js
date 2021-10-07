@@ -63,9 +63,22 @@
 import { Container, Navbar, NavDropdown, NavLink, Nav } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Link } from 'react-router-dom';
-import { useHistory } from 'react-router'
+import { useHistory } from 'react-router';
+import GLogin from './GLogin';
 
 function NavigationMenu() {
+
+
+
+
+  
+
+
+
+
+
+
+
   const history = useHistory();
   function logout(){
     localStorage.clear();
@@ -108,13 +121,15 @@ function NavigationMenu() {
 
             </NavDropdown>
 
-            <NavLink   ><Link  to="/pollq" className="btn sandy"  id="voli">Poll</Link></NavLink>
+            {/* <NavLink   ><Link  to="/pollq" className="btn sandy"  id="voli">Poll</Link></NavLink> */}
 
             {/* <NavDropdown.Item><Link to="/showPoll" className=" btn">Poll</Link></NavDropdown.Item> */}
 
           </Nav>
           <Nav>
-            <Nav.Link href="#" onClick={logout} id="voli" style={{color :" #fff"}}>Log Out</Nav.Link>
+          <GLogin />
+            {/* <Nav.Link href="#" onClick={logout} id="voli" style={{color :" #fff"}}>Log Out</Nav.Link> */}
+           
           </Nav>
         </Navbar.Collapse>
       </Container>

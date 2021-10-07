@@ -51,10 +51,12 @@ const AdminHome = () => {
 
 
   useEffect(() => {
-    if (localStorage.getItem('login')){
+    if ((localStorage.getItem('login')) || (localStorage.getItem('glogin'))){
 
         history.push("/adminHome")
     }
+    
+    
     else{
       alert("Please log in ")
       history.push("/login")
@@ -68,7 +70,7 @@ const AdminHome = () => {
     <div class="mask">
       <div class="container h-100">
       
-        <div class="row align-items-center h-100">
+        <div class="row align-items-center h-100 animate__animated   animate__wobble">
         
           <div class="col-md-6">
             <h1 class="mb-4">Welcome to <span class="text-warning">AMS</span><br/><span class="cyan-text" style={{color : "#74D5DE"}}>Admin</span> Dashboard</h1>
@@ -76,7 +78,7 @@ const AdminHome = () => {
           	
           </div>
           <div class="col-md-6">
-            <img src="https://mdbootstrap.com/img/illustrations/hiker-man-colour.svg" alt="" class="img-fluid" style={{marginTop:"3%"}} />
+            <img src="https://mdbootstrap.com/img/illustrations/hiker-man-colour.svg" alt="" class="img-fluid  animate__animated   animate__wobble" style={{marginTop:"3%"}} />
           </div>
         
         </div>
