@@ -3,14 +3,26 @@ import I1 from "../../images/2.jpg";
 import l1 from "../../images/alum1.jpg";
 import l2 from "../../images/alum2.jpg";
 import l3 from "../../images/alum3.jpg";
+import CountUp from 'react-countup';
+import VisibilitySensor from 'react-visibility-sensor';
+import "animate.css"
+
 import { Container, Row, Col, Image } from 'react-bootstrap';
 
 const Statistics = () => {
+
+
+  const [focus, setFocus] = React.useState(false);
+
+
+
+
+  
     return (
         <>
         <Container id="about" style={{ 'margin-top': '100px' }}>
             <Row >
-                <Col xs={12} md={12} className="d-flex align-items-center justify-content-center">
+                <Col xs={12} md={12} className="d-flex align-items-center justify-content-center animate__animated animate__lightSpeedInLeft">
                     <h1 style={{ 'margin-bottom': '50px' }} id="alum">Who We are</h1>
                 </Col>
             </Row>
@@ -32,20 +44,15 @@ const Statistics = () => {
 
 
 
-
-
-
         <div className="container z-depth-1 my-5 py-5 px-4 px-lg-0 " id="howwework">
 <section>
-  <h3 className="font-weight-bold text-center dark-grey-text pb-2" id = "alum">How We Work</h3>
-  
+  <h3 className="font-weight-bold text-center dark-grey-text pb-2  " id = "alum">How We Work</h3>
   <div className="row">
-    <div className="col-lg-8 mx-auto">
-
+    <div className="col-lg-8 mx-auto   animate__animated animate__lightSpeedInLeft ">
       <ol className="timeline">
         <li className="timeline-element">
           <h5 className="font-weight-bold dark-grey-text mb-3" id = "alum">STEP 1</h5>
-          <p className="text-muted">Universities Contactus to orgnize the Events related to their Students and Alumnis By registering on our portal</p>
+          <p className="text-muted ">Universities Contactus to orgnize the Events related to their Students and Alumnis By registering on our portal</p>
         </li>
 
         <li className="timeline-element">
@@ -84,29 +91,100 @@ const Statistics = () => {
 
 
 
-<div class="container mt-5 pt-5 pb-3 px-5 z-depth-1 bgi pr">
+<div class="container mt-5 pt-5 pb-3 px-5 z-depth-1 bgi pr ">
   <section class="text-center dark-grey-text" >
     <h1 style={{fontSize : "20px" , color : "#fff"}}>Till Now We Have Covered</h1>
     <div class="row text-center d-flex justify-content-center my-5">
-      <div class="col-lg-3 col-md-6 mb-4">
+      <div class="col-lg-3 col-md-6 mb-4 ">
         <i class="fas fa-envelope-open fa-3x mb-4 grey-text " id="alum"></i>
         <h5 class="font-weight-normal mb-3 bgw">Alumni</h5>
-        <p class=" mb-0" id="alum">2.7K</p>
+        <p class="counterup mb-0" id="alum">
+        <CountUp start={focus ? 0 : null} end={28} duration={5} redraw={true}>
+            {({ countUpRef }) => (
+              <div>
+                <span ref={countUpRef} />
+                <VisibilitySensor
+                  onChange={isVisible => {
+                    if (isVisible) {
+                      setFocus(true);
+                    } 
+                  }}
+                >
+                  <a>k</a>
+                </VisibilitySensor>
+              </div>
+            )}
+          </CountUp>
+ </p>
       </div>
       <div class="col-lg-3 col-md-6 mb-4">
         <i class="fas fa-layer-group fa-3x mb-4 grey-text " id = "att"></i>
         <h5 class="font-weight-normal mb-3 bgw">Attended</h5>
-        <p class=" mb-0" id = "att">0.8k</p>
+        <p class=" mb-0" id = "att">
+
+        <CountUp start={focus ? 0 : null} end={10} duration={5} redraw={true}>
+            {({ countUpRef }) => (
+              <div>
+                <span ref={countUpRef} />
+                <VisibilitySensor
+                  onChange={isVisible => {
+                    if (isVisible) {
+                      setFocus(true);
+                    } 
+                  }}
+                >
+                  <a>k</a>
+                </VisibilitySensor>
+              </div>
+            )}
+          </CountUp>
+
+
+        </p>
       </div>
       <div class="col-lg-3 col-md-6 mb-4">
         <i class="fas fa-brush fa-3x mb-4 grey-text" id = "vol"></i>
         <h5 class="font-weight-normal mb-3 bgw">Volunteers</h5>
-        <p class=" mb-0" style={{color : "#46BFBD"}}>350</p>
+        <p class=" mb-0" style={{color : "#46BFBD"}}>
+        <CountUp start={focus ? 0 : null} end={350} duration={6} redraw={true}>
+            {({ countUpRef }) => (
+              <div>
+                <span ref={countUpRef} />
+                <VisibilitySensor
+                  onChange={isVisible => {
+                    if (isVisible) {
+                      setFocus(true);
+                    } 
+                  }}
+                >
+                </VisibilitySensor>
+              </div>
+            )}
+          </CountUp>
+        
+        </p>
       </div>
       <div class="col-lg-3 col-md-6 mb-4">
         <i class="fas fa-puzzle-piece fa-3x mb-4 grey-text" id = "uni"></i>
         <h5 class="font-weight-normal mb-3 bgw">Universities</h5>
-        <p class=" mb-0" id = "uni">38</p>
+        <p class=" mb-0" id = "uni">
+
+        <CountUp start={focus ? 0 : null} end={38} duration={5} redraw={true}>
+            {({ countUpRef }) => (
+              <div>
+                <span ref={countUpRef} />
+                <VisibilitySensor
+                  onChange={isVisible => {
+                    if (isVisible) {
+                      setFocus(true);
+                    } 
+                  }}
+                >
+                </VisibilitySensor>
+              </div>
+            )}
+          </CountUp>
+        </p>
       </div>
     </div>
     
@@ -130,7 +208,7 @@ const Statistics = () => {
   <section class="dark-grey-text text-center">
 
   
-    <h2 class="font-weight-bold mb-4 pb-2" id = "alum">Our Recent Blogs</h2>
+    <h2 class="font-weight-bold mb-4 pb-2 slideLeft" id = "alum">Our Recent Blogs</h2>
    
       {/* <p class="text-center mx-auto w-responsive mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur veniam.</p> */}
 

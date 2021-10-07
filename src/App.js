@@ -37,6 +37,13 @@ import Login from './MyComponents/Admin/Login';
 import UserFooter from './MyComponents/Admin/AdminFooter';
 import Formregister from './MyComponents/User/Formregister';
 import AdminRegister from './MyComponents/Admin/AdminRegister';
+import JobLogin from './MyComponents/Admin/JobLogin';
+import JobRegistration from './MyComponents/Admin/JobRegistration';
+import Jobsuccess from './MyComponents/Admin/Jobsuccess';
+
+
+
+
 const App = () => {
     return (
         <div>
@@ -196,10 +203,34 @@ const App = () => {
                     <Route path="/result">
                         <NavigationMenu />
                         <ShowPoll />
-                        
-        
                         <AdminFooter />
                     </Route>
+
+
+
+                    <Route path="/jobreg">
+                        <NavigationMenu />
+                        <JobRegistration />
+                        <AdminFooter />
+                    </Route>
+                    <Route path="/joblogin">
+                        <NavigationMenu />
+                        <JobLogin />
+                        <AdminFooter />
+                    </Route>
+
+                    <Route path="/jobsuccess">
+                        <NavigationMenu />
+                        <Jobsuccess/>
+                        <AdminFooter />
+                    </Route>
+
+                   
+                    
+
+                    
+                    
+
 
 
                 </Switch>
@@ -209,4 +240,4 @@ const App = () => {
     )
 }
 
-export default App
+export default App;

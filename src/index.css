@@ -568,3 +568,7 @@ label[for=no] {
 #no:checked ~ .switch label[for=no] {
   color: #fff;
 }
+
+
+
+/* del */

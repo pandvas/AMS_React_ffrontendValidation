@@ -83,13 +83,13 @@ history.push('/')
                     <Navbar.Toggle aria-controls="responsive-navbar-nav"></Navbar.Toggle>
                     <Navbar.Collapse id="responsive-navbar-nav">
 
-                         <Nav className="me-auto">
-                            <Nav.Link href="#" onClick={Home} id="voli">Home</Nav.Link>
-                            <Nav.Link href="#about" onClick="" id="voli">About Us</Nav.Link>
-                            <Nav.Link href="#gallery" onClick="" id="voli">Gallery</Nav.Link>
-                            <Nav.Link href="#contact" onClick="" id="voli">Contact Us</Nav.Link>
-                            <Nav.Link href="#ourteam" onClick="" id="voli">Our Team</Nav.Link>
-                            <Nav.Link href="/pollq" onClick="/pollq" id="voli">Poll</Nav.Link>
+                         <Nav className="me-auto" >
+                            <Nav.Link href="#" onClick={Home} id="voli"   style={{marginLeft : "15px"}}>Home</Nav.Link>
+                            <Nav.Link href="#about" onClick="" id="voli"   style={{marginLeft : "15"}}>About Us</Nav.Link>
+                            <Nav.Link href="#gallery" onClick="" id="voli"  style={{marginLeft : "15px"}}>Gallery</Nav.Link>
+                            <Nav.Link href="#contact" onClick="" id="voli"  style={{marginLeft : "15px"}}>Contact Us</Nav.Link>
+                            <Nav.Link href="#ourteam" onClick="" id="voli"  style={{marginLeft : "15px"}}>Our Team</Nav.Link>
+                            <Nav.Link href="/pollq" onClick="/pollq" id="voli"  style={{marginLeft : "15px"}}>Poll</Nav.Link>
                              {/* <NavLink ><Link  to="/pollq" className="btn sandy"  id="voli">Poll</Link></NavLink>  */}
                         </Nav>
                         {/* <Nav>
