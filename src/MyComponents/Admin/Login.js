@@ -48,6 +48,7 @@ const Login = () => {
         console.log(res.data)
         console.log(res.data.access)
         localStorage.setItem("login", res.data.access)
+        localStorage.setItem("name", res.data.name)
         history.push("/adminHome");
       })
       .catch((err) => {
